@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager — CloudTech Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-icon">⬡</span>
+        <div>
+          <span class="brand-name">Task Manager</span>
+          <span class="brand-sub">CloudTech Solutions</span>
+        </div>
+      </div>
+      <div class="header-meta">
+        <span class="badge" id="badge-pending">0 pendientes</span>
+        <span class="badge badge-done" id="badge-done">0 completadas</span>
+      </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress-wrap">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <div class="progress-label" id="progress-label">Sin tareas aún</div>
+  </header>
+
+  <main class="main">
+
+    <!-- FORM -->
+    <section class="card form-card">
+      <h2 class="section-title">Nueva tarea</h2>
+      <div class="form-row">
+        <input
+          type="text"
+          id="task-input"
+          class="input"
+          placeholder="Describe la tarea…"
+          maxlength="120"
+          autocomplete="off"
+        />
+        <select id="priority-select" class="select">
+          <option value="alta">🔴 Alta</option>
+          <option value="media" selected>🟡 Media</option>
+          <option value="baja">🟢 Baja</option>
+        </select>
+        <button class="btn btn-primary" id="add-btn">Agregar</button>
+      </div>
+      <div class="char-count" id="char-count">0 / 120</div>
+    </section>
+
+    <!-- FILTERS -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">Todas</button>
+      <button class="filter-btn" data-filter="pendiente">Pendientes</button>
+      <button class="filter-btn" data-filter="completada">Completadas</button>
+      <button class="filter-btn" data-filter="alta">🔴 Alta</button>
+      <button class="filter-btn" data-filter="media">🟡 Media</button>
+      <button class="filter-btn" data-filter="baja">🟢 Baja</button>
+    </div>
+
+    <!-- TASK LIST -->
+    <section class="task-list" id="task-list">
+      <!-- Empty state -->
+      <div class="empty-state" id="empty-state">
+        <span class="empty-icon">📋</span>
+        <p>No hay tareas todavía.<br>Agrega la primera usando el formulario de arriba.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <footer class="footer">
+    <span>Task Manager · CloudTech Solutions · Laboratorio S13</span>
+    <span class="mono" id="task-count-footer">0 tareas en total</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
