@@ -15,7 +15,7 @@ La aplicación incluye:
 
 # 🌐 URL de la aplicación en la nube
 La aplicación está desplegada en Azure App Service.
-🔗 URL pública: task-manager-1-g9gjh9d6bqdsgwdp.canadacentral-01.azurewebsites.net
+🔗 URL pública: [task-manager-1-g9gjh9d6bqdsgwdp.canadacentral-01.azurewebsites.net](task-manager-1-g9gjh9d6bqdsgwdp.canadacentral-01.azurewebsites.net)
 
 # ⚙️ Proceso de despliegue
 Creación del repositorio en GitHub con ramas por integrante.
